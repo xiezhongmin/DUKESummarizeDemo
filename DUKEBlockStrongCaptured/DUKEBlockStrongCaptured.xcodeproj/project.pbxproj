@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AEF15612387CB10008839D6 /* BlockStrongCaptured1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF15602387CB10008839D6 /* BlockStrongCaptured1.m */; };
 		3AEF98EC237562EF00543949 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF98EB237562EF00543949 /* AppDelegate.m */; };
 		3AEF98EF237562EF00543949 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF98EE237562EF00543949 /* ViewController.m */; };
 		3AEF98F2237562EF00543949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEF98F0237562EF00543949 /* Main.storyboard */; };
@@ -15,7 +16,7 @@
 		3AEF98FA237562F000543949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF98F9237562F000543949 /* main.m */; };
 		3AEF9904237562F000543949 /* DUKEBlockStrongCapturedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF9903237562F000543949 /* DUKEBlockStrongCapturedTests.m */; };
 		3AEF990F237562F000543949 /* DUKEBlockStrongCapturedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF990E237562F000543949 /* DUKEBlockStrongCapturedUITests.m */; };
-		3AEF991E237563BE00543949 /* BlockStrongCaptured.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF991D237563BE00543949 /* BlockStrongCaptured.m */; };
+		3AEF991E237563BE00543949 /* BlockStrongCaptured2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF991D237563BE00543949 /* BlockStrongCaptured2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AEF155F2387CB10008839D6 /* BlockStrongCaptured1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockStrongCaptured1.h; sourceTree = "<group>"; };
+		3AEF15602387CB10008839D6 /* BlockStrongCaptured1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStrongCaptured1.m; sourceTree = "<group>"; };
 		3AEF98E7237562EF00543949 /* DUKEBlockStrongCaptured.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DUKEBlockStrongCaptured.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF98EA237562EF00543949 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AEF98EB237562EF00543949 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,8 +55,8 @@
 		3AEF990A237562F000543949 /* DUKEBlockStrongCapturedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DUKEBlockStrongCapturedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEF990E237562F000543949 /* DUKEBlockStrongCapturedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DUKEBlockStrongCapturedUITests.m; sourceTree = "<group>"; };
 		3AEF9910237562F000543949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AEF991C237563BE00543949 /* BlockStrongCaptured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockStrongCaptured.h; sourceTree = "<group>"; };
-		3AEF991D237563BE00543949 /* BlockStrongCaptured.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStrongCaptured.m; sourceTree = "<group>"; };
+		3AEF991C237563BE00543949 /* BlockStrongCaptured2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockStrongCaptured2.h; sourceTree = "<group>"; };
+		3AEF991D237563BE00543949 /* BlockStrongCaptured2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockStrongCaptured2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AEF15622387D372008839D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AEF98F0237562EF00543949 /* Main.storyboard */,
+				3AEF98F3237562F000543949 /* Assets.xcassets */,
+				3AEF98F5237562F000543949 /* LaunchScreen.storyboard */,
+				3AEF98F8237562F000543949 /* Info.plist */,
+				3AEF98F9237562F000543949 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3AEF98DE237562EF00543949 = {
 			isa = PBXGroup;
 			children = (
@@ -104,17 +119,15 @@
 		3AEF98E9237562EF00543949 /* DUKEBlockStrongCaptured */ = {
 			isa = PBXGroup;
 			children = (
-				3AEF991C237563BE00543949 /* BlockStrongCaptured.h */,
-				3AEF991D237563BE00543949 /* BlockStrongCaptured.m */,
+				3AEF155F2387CB10008839D6 /* BlockStrongCaptured1.h */,
+				3AEF15602387CB10008839D6 /* BlockStrongCaptured1.m */,
+				3AEF991C237563BE00543949 /* BlockStrongCaptured2.h */,
+				3AEF991D237563BE00543949 /* BlockStrongCaptured2.m */,
 				3AEF98EA237562EF00543949 /* AppDelegate.h */,
 				3AEF98EB237562EF00543949 /* AppDelegate.m */,
 				3AEF98ED237562EF00543949 /* ViewController.h */,
 				3AEF98EE237562EF00543949 /* ViewController.m */,
-				3AEF98F0237562EF00543949 /* Main.storyboard */,
-				3AEF98F3237562F000543949 /* Assets.xcassets */,
-				3AEF98F5237562F000543949 /* LaunchScreen.storyboard */,
-				3AEF98F8237562F000543949 /* Info.plist */,
-				3AEF98F9237562F000543949 /* main.m */,
+				3AEF15622387D372008839D6 /* Supporting Files */,
 			);
 			path = DUKEBlockStrongCaptured;
 			sourceTree = "<group>";
@@ -267,9 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEF15612387CB10008839D6 /* BlockStrongCaptured1.m in Sources */,
 				3AEF98EF237562EF00543949 /* ViewController.m in Sources */,
 				3AEF98FA237562F000543949 /* main.m in Sources */,
-				3AEF991E237563BE00543949 /* BlockStrongCaptured.m in Sources */,
+				3AEF991E237563BE00543949 /* BlockStrongCaptured2.m in Sources */,
 				3AEF98EC237562EF00543949 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

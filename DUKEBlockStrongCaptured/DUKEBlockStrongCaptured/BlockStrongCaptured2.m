@@ -1,12 +1,14 @@
 //
-//  BlockStrongCaptured.c
+//  BlockStrongCaptured2.m
 //  DUKEBlockStrongCaptured
 //
 //  Created by duke on 2019/11/8.
 //  Copyright © 2019 com.duke.DUKEBlockStrongCaptured. All rights reserved.
-//
+// 参考了:
+// https://github.com/tripleCC/Laboratory/tree/master/BlockStrongReferenceObject
+// https://juejin.im/post/5d7e3b8de51d4561ac7bcd5f
 
-#import "BlockStrongCaptured.h"
+#import "BlockStrongCaptured2.h"
 
 /* 扩展布局信息编码
 // Extended layout encoding.
@@ -53,8 +55,6 @@ enum {
  /// replaces it. For example, 0x00000x00 means x BLOCK_LAYOUT_STRONG and no
  /// BLOCK_LAYOUT_BYREF and no BLOCK_LAYOUT_WEAK objects are captured.
  */
-
-#include "BlockStrongCaptured.h"
 
 @interface LayoutInfoItem ()
 @property (nonatomic, assign, readwrite) unsigned int type;
@@ -311,7 +311,7 @@ NSArray <LayoutInfoItem *> * _dk_compactEncodingForLayout(const char *aLayout)
     return compactEncoding.copy;
 }
 
-BlockLayoutInfo *dk_blockStrongCaptured(id block)
+BlockLayoutInfo *dk_blockStrongCaptured2(id block)
 {
     if (!block)
         return nil;

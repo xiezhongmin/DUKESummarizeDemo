@@ -6,17 +6,11 @@
 //  Copyright © 2019 com.duke.DUKEBlockStrongCaptured. All rights reserved.
 //
 
-// 参考了:
-// https://github.com/tripleCC/Laboratory/tree/master/BlockStrongReferenceObject
-// https://juejin.im/post/5d7e3b8de51d4561ac7bcd5f
-
 #import "ViewController.h"
-#import "BlockStrongCaptured.h"
+#import "BlockStrongCaptured1.h"
+#import "BlockStrongCaptured2.h"
 
 @implementation ViewController
-{
-    void (^_block)(void);
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,7 +36,7 @@
     NSObject *o18 = o1;
     NSObject *o19 = o1;
 
-    _block = ^{
+    void (^block)(void) = ^{
         o1;
         o2;
         o3;
@@ -64,21 +58,20 @@
         o19;
     };
     
-//   __block struct S {
-//        int i;
-//        __strong NSObject *o1;
-//        long j;
-//        __weak NSObject *o2;
-//    } foo;
-//    foo.o1 = [NSObject new];
-//    foo.o2 = foo.o1;
-//    _block = ^{
-//        foo;
-//    };
-    
-    BlockLayoutInfo *info = dk_blockStrongCaptured(_block);
-    NSLog(@"%@", info);
+    [self blockStrongCapturedExample1:block];
+    [self blockStrongCapturedExample2:block];
 }
 
+- (void)blockStrongCapturedExample1:(id)block
+{
+    NSArray *results = dk_blockStrongCaptured1(block);
+    NSLog(@"Example1 = %@", results);
+}
+
+- (void)blockStrongCapturedExample2:(id)block
+{
+    BlockLayoutInfo *info = dk_blockStrongCaptured2(block);
+    NSLog(@"Example2 = %@", info);
+}
 
 @end
